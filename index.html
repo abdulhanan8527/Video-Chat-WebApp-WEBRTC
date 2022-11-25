@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    body {
+      background-image: url('./public/1.jpg');
+      background-size: cover;
+    }
+    </style>
+  <title>WebRTC Video Chat</title>
+  <link rel="stylesheet" href="/css/main.css" />
+
+</head>
+
+<body>
+
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <h1 style="color:floralwhite; text-align: center; font-weight: bold; font-size: 300%;">WebRTC Video Chat</h1>
+
+  <div id="videos">
+    <video id="localVideo" autoplay muted playsinline></video>
+    <video id="remoteVideo" autoplay playsinline></video>
+  </div>
+
+  <div id="buttons">
+    <button class="mdc-button mdc-button--raised" enabled id="camBtn">
+      <i class="material-icons mdc-button__icon" aria-hidden="true">close</i>
+      <span class="mdc-button__label">Turn On/Off Cam</span>
+    </button>
+    <button class="mdc-button mdc-button--raised" enabled id="micBtn">
+      <i class="material-icons mdc-button__icon" aria-hidden="true">close</i>
+      <span class="mdc-button__label">Turn On/Off Mic</span>
+    </button>
+    <button class="mdc-button mdc-button--raised" enabled id="screenBtn">
+      <i class="material-icons mdc-button__icon" aria-hidden="true">close</i>
+      <span class="mdc-button__label">Share Screen</span>
+    </button>
+    <button class="mdc-button mdc-button--raised" enabled id="toggleRecordingBtn">
+      <i class="material-icons mdc-button__icon" aria-hidden="true">close</i>
+      <span class="mdc-button__label">Start/Stop Recording</span>
+    </button>
+    <button class="mdc-button mdc-button--raised" enabled id="toggleBtnScreen">
+      <i class="material-icons mdc-button__icon" aria-hidden="true">close</i>
+      <span class="mdc-button__label">Start/Stop Screen Recording</span>
+    </button>
+    <button class="mdc-button mdc-button--raised" disabled id="hangupBtn">
+      <i class="material-icons mdc-button__icon" aria-hidden="true">close</i>
+      <span class="mdc-button__label">Hangup</span>
+    </button>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
